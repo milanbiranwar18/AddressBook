@@ -36,5 +36,21 @@ namespace AddressBook
 
             People.Add(person);
         }
+
+        public static void PrintAddressBook()
+        {
+            foreach (Contact contact in People)
+            {
+
+
+                Console.WriteLine("First Name: " + contact.FirstName);
+                Console.WriteLine("Last Name: " + contact.LastName);
+                Console.WriteLine("Phone Number: " + contact.PhoneNumber);
+                Console.WriteLine("Address 1: " + contact.Address);
+                Console.WriteLine("Address 2: " + contact.ZipCode);
+                Console.WriteLine("-------------------------------");
+            }
+
+        }
     }
 }
