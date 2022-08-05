@@ -84,5 +84,20 @@ namespace AddressBook
                 }
             }
         }
+
+        public void DeleteContact(string firstName1)
+        {
+            foreach (Contact person in People)
+            {
+                if (person.FirstName == firstName1)
+                {
+                    People.Remove(person);
+                    break;
+
+                }
+
+            }
+            Console.WriteLine("Your contact is Deleted");
+        }
     }
 }
