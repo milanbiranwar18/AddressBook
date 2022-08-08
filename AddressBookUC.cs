@@ -6,8 +6,21 @@ using System.Threading.Tasks;
 
 namespace AddressBook
 {
-    internal class AddressBookUC
+    public class AddressBookUC
     {
+       
+        public void AddMultipleContact1()
+        {
+            Console.WriteLine("Enter the Number of Persons to add");
+            int Num = Convert.ToInt32(Console.ReadLine());
+            for (int i = 1; i <= Num; i++)
+            {
+                
+                AddNewContact();
+            }
+        }
+
+
         public static List<Contact> People = new List<Contact>();
         public void AddNewContact()
         {
@@ -99,5 +112,7 @@ namespace AddressBook
             }
             Console.WriteLine("Your contact is Deleted");
         }
+
+        
     }
 }
