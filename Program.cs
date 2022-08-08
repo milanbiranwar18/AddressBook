@@ -5,7 +5,7 @@
         public static void Main(string[] args)
         {
             //Console.WriteLine("Wellcome to Welcome to Address Book Program");
-            //AddressBookUC obj = new AddressBookUC();
+            AddressBookUC obj = new AddressBookUC();
             //obj.AddNewContact();
             //AddressBookUC.PrintAddressBook();
 
@@ -20,8 +20,10 @@
             //AddressBookUC.PrintAddressBook();
             //Console.ReadLine();
 
-            MultiplePerson multiplePerson = new MultiplePerson();
-            multiplePerson.AddMultipleContact1();
+            
+            obj.AddMultipleContact1();
+
+            
         }
     }
 }
