@@ -20,10 +20,14 @@
             //AddressBookUC.PrintAddressBook();
             //Console.ReadLine();
 
-            
-            obj.AddMultipleContact1();
 
-            
+            // obj.AddMultipleContact1();
+
+
+            MultipleAddressBook multipleAddressBook = new MultipleAddressBook();
+            multipleAddressBook.AddAddressBook();
+
+
         }
     }
 }
