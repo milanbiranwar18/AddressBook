@@ -8,26 +8,33 @@ namespace AddressBook
 {
     public class AddressBookUC
     {
-       
+
         public void AddMultipleContact1()
         {
             Console.WriteLine("Enter the Number of Persons to add");
             int Num = Convert.ToInt32(Console.ReadLine());
             for (int i = 1; i <= Num; i++)
             {
-                
+
                 AddNewContact();
             }
         }
 
 
+
         public static List<Contact> People = new List<Contact>();
+
+        string? next = string.Empty;
+        bool anotheruser = true;
         public void AddNewContact()
         {
+
             Contact person = new Contact();
 
             Console.Write("Enter First Name: ");
             person.FirstName = Console.ReadLine();
+
+
 
             Console.Write("Enter Last Name: ");
             person.LastName = Console.ReadLine();
@@ -35,11 +42,13 @@ namespace AddressBook
             Console.Write("Enter Address: ");
             person.Address = Console.ReadLine();
 
+
             Console.Write("Enter City: ");
             person.City = Console.ReadLine();
 
             Console.Write("Enter ZipCode: ");
             person.ZipCode = Console.ReadLine();
+
 
             Console.Write("Enter Phone Number: ");
             person.PhoneNumber = Console.ReadLine();
@@ -47,8 +56,26 @@ namespace AddressBook
             Console.Write("Enter Email: ");
             person.Email = Console.ReadLine();
 
+
+            if (People.Count == 0)
+            {
+                People.Add(person);
+            }
+           
+            do
+            {
+                Console.WriteLine("FirstName is already exist, Do you want to add again? press yes/no");
+                next = Console.ReadLine();
+            } while (next != "yes" && next != "no" && next != "Yes" && next != "No");
+            anotheruser = (next == "Yes" || next == "yes");
+       
             People.Add(person);
+
+
+          
         }
+
+  
 
         public static void PrintAddressBook()
         {
@@ -113,6 +140,8 @@ namespace AddressBook
             Console.WriteLine("Your contact is Deleted");
         }
 
-        
+
+       
+
     }
 }
