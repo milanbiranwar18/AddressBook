@@ -3,6 +3,7 @@
    public class Program
     {
         public static void Main(string[] args)
+        
         {
             //Console.WriteLine("Wellcome to Welcome to Address Book Program");
             AddressBookUC obj = new AddressBookUC();
@@ -26,6 +27,12 @@
 
             MultipleAddressBook multipleAddressBook = new MultipleAddressBook();
             multipleAddressBook.AddAddressBook();
+
+            AddressBookUC.PrintAddressBook();
+            obj.EditContact("firstName");
+            obj.DeleteContact("firstName1");
+
+
 
 
         }
